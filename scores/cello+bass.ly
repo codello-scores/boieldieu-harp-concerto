@@ -16,12 +16,15 @@ twoside = ##f
   copyright = "© LJO Bremen"
 }
 
-CelloI = \keepWithTag #'Cello << \CelloBassNotesI \DynamicsI >>
-CelloII = \keepWithTag #'Cello << \CelloBassNotesII \DynamicsII >>
-CelloIII = \keepWithTag #'Cello << \CelloBassNotesIII \DynamicsIII >>
-BassI = \keepWithTag #'Bass << \CelloBassNotesI \DynamicsI >>
-BassII = \keepWithTag #'Bass << \CelloBassNotesII \DynamicsII >>
-BassIII = \keepWithTag #'Bass << \CelloBassNotesIII \DynamicsIII >>
+BreaksI = { s1*13 \break s1*54 \break }
+BreaksII = {}
+BreaksIII = { s1*216 \break }
+CelloI = \keepWithTag #'Cello << \CelloBassNotesI \DynamicsI \BreaksI >>
+CelloII = \keepWithTag #'Cello << \CelloBassNotesII \DynamicsII \BreaksII >>
+CelloIII = \keepWithTag #'Cello << \CelloBassNotesIII \DynamicsIII \BreaksIII >>
+BassI = \keepWithTag #'Bass << \CelloBassNotesI \DynamicsI \BreaksI >>
+BassII = \keepWithTag #'Bass << \CelloBassNotesII \DynamicsII \BreaksII >>
+BassIII = \keepWithTag #'Bass << \CelloBassNotesIII \DynamicsIII \BreaksIII >>
 
 \partPaper
 
@@ -58,6 +61,7 @@ BassIII = \keepWithTag #'Bass << \CelloBassNotesIII \DynamicsIII >>
       aDueText = #"Unis."
       printPartCombineTexts = ##f
       \override VerticalAxisGroup.remove-layer = 2
+      \consists Merge_rests_engraver
     } \partCombine \CelloI \BassI
   >>
 }

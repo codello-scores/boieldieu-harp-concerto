@@ -86,15 +86,32 @@ CelloBassNotesI = \relative c {
   f f g g a a b b |
   c r fis, r g r a r |
   g4 g,4 r2 |
-  g'4 r g r |
-  c, r r2 |
+  \div
+  \tag #'Cello {
+    g4 r g r |
+    c, r r2 |
+  }
+  \tag #'Bass {
+    g''4 r g r |
+    c, r r2 |
+  }
   r2 r4 g |
   c r r2 |
-  r2 r4 g |
-  c r r g |
-  c r r g |
-  c r c c |
-  c r r2 |
+  \tag #'Cello {
+    r2 r4 g |
+    c, r r g' |
+    c, r r g' |
+    c, r c c |
+    c r r2 |
+  }
+  \tag #'Bass {
+    r2 r4 g' |
+    c r r g |
+    c r r g |
+    c r c c |
+    c r r2 |
+  }
+  \unis
   R1*2 |
   r2 r4 g' |
   c-! g-! c,-! r |
@@ -230,9 +247,11 @@ CelloBassNotesI = \relative c {
   dis4\> dis\! r2 |
   e4\> e\! r2 |
   a,4 r b b |
+  
+  \barNumberCheck 212
   e r r2 |
   r2 r4 b |
-  d r r2 |
+  e r r2 |
   r2 r4 b |
   e r r2 |
   r2 r4 e |
