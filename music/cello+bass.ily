@@ -401,6 +401,8 @@ CelloBassNotesIII = \relative c' {
   \clef bass
   \unis
   c4\pp ^"pizz." r c r |
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = 1,1,1,1
   c r r2 |
   as4 r as r |
   g r r2 |
