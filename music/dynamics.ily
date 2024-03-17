@@ -274,14 +274,10 @@ DynamicsIII = {
 	\barNumberCheck 233
 	\tag #Strings {
 		s2
-		\once \offset X-offset -3.5 TextScript
-		\once \offset Y-offset 0.5 TextScript
-		s2 ^"cadenza"-\tweak script-priority -100 \fermata |
+		s2 ^\markup { \halign #0 "cadenza" }-\tweak script-priority -100 \fermata |
 	}
 	\tag #Winds {
-		\once \offset X-offset -3.5 TextScript
-		\once \offset Y-offset 0.5 TextScript
-		R1 ^"cadenza"-\tweak script-priority -100 \fermata |
+		R1 ^\markup { \halign #0 "cadenza" }-\tweak script-priority -100 \fermata |
 	}
 	
 	\barNumberCheck 234

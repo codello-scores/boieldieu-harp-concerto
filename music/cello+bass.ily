@@ -153,13 +153,13 @@ CelloBassNotesI = \relative c {
   g r b! r |
   c c d d, |
   g, r r2 |
-  r4 fis' ^"pizz." fis fis |
+  r4 fis' ^\pizz fis fis |
   g r r2 |
   r4 fis fis fis |
   g r r2 |
   r4 gis gis gis |
   a r r2 |
-  r4 gis ^"arco" gis gis |
+  r4 gis ^\arco gis gis |
   a fis2-> g4 |
   d r r2 |
   r4 fis2-> g4 |
@@ -224,7 +224,7 @@ CelloBassNotesI = \relative c {
   c r r c |
   b r r b |
   ais r r ais |
-  b r r b' ^"pizz." |
+  b r r b' ^\pizz |
   b, r r b |
   b r r b |
   b r r b |
@@ -232,7 +232,7 @@ CelloBassNotesI = \relative c {
   b r b r |
   b r r2 |
   R1*1 |
-  e4-! ^"arco" b-! e-! b-! |
+  e4-! ^\arco b-! e-! b-! |
   fis'-! b,-! e-! b-! |
   b'-! b,-! cis-! dis-! |
   e b e e, |
@@ -400,7 +400,7 @@ CelloBassNotesII = \relative c {
 CelloBassNotesIII = \relative c' {
   \clef bass
   \unis
-  c4\pp ^"pizz." r c r |
+  c4\pp ^\pizz r c r |
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = 1,1,1,1
   c r r2 |
@@ -421,7 +421,7 @@ CelloBassNotesIII = \relative c' {
   c4 r c r |
   b r c r |
   f, g r g |
-  c, ^"arco" c8 c c4 c |
+  c, ^\arco c8 c c4 c |
   d d8 d d4 d |
   es4 8 8 4 4 |
   f4 8 8 4 fis |
@@ -430,7 +430,7 @@ CelloBassNotesIII = \relative c' {
   g4 8 8 a4 b |
   c as8 8 4 4 |
   g4 g g r4 |
-  g ^"pizz." r r2 |
+  g ^\pizz r r2 |
   r4 g g g |
   g r r2 |
   r4 g g g |
@@ -464,7 +464,7 @@ CelloBassNotesIII = \relative c' {
   b r c r |
   f, g r g |
   \barNumberCheck 57
-  c, ^"arco" es8 es g g c c |
+  c, ^\arco es8 es g g c c |
   g,4 b8 b d d g g |
   c,4 es8 es g g c c |
   g,4 b8 b d d g g |
@@ -508,12 +508,12 @@ CelloBassNotesIII = \relative c' {
   bes r r g |
   c r r as |
   bes r r2 |
-  r2 r4 bes ^"pizz." |
+  r2 r4 bes ^\pizz |
   bes r r2 |
   r2 r4 bes |
   bes r r2 |
   R1*4 |
-  es4 ^"arco" r as r |
+  es4 ^\arco r as r |
   bes r bes, r |
   es r as r |
   bes r bes, r |
@@ -523,7 +523,7 @@ CelloBassNotesIII = \relative c' {
   bes4 r bes, r |
   es r r2 |
   R1*16 |
-  c'4\pp ^"pizz." r c r |
+  c'4\pp ^\pizz r c r |
   c r r2 |
   as4 r as r |
   g r r2 |
@@ -542,7 +542,7 @@ CelloBassNotesIII = \relative c' {
   c4 r c r |
   b r c r |
   f, g r g |
-  c,8 ^"arco" c es es g g c c |
+  c,8 ^\arco c es es g g c c |
   g, g b b d d g g |
   c, c es es g g c c |
   g, g b b d d g g |
@@ -554,7 +554,7 @@ CelloBassNotesIII = \relative c' {
   g r r2 |
   g4 r r2 |
   
-  c4 ^"pizz." g c g |
+  c4 ^\pizz g c g |
   b g b g |
   c g c g |
   d' g, d' g, |
@@ -591,7 +591,7 @@ CelloBassNotesIII = \relative c' {
   a r b r |
   g r gis r |
   a r b r |
-  r c2.-> ^"arco" |
+  r c2.-> ^\arco |
   r4 bes2.-> |
   r4 bes2.-> |
   r4 bes,2.-> |
@@ -613,12 +613,12 @@ CelloBassNotesIII = \relative c' {
     d b |
     c4 r c2 |
     bes as |
-    g4 r r \clef bass g ^"pizz." |
+    g4 r r \clef bass g ^\pizz |
   }
   \tag #'Bass {
     es-! r r2 |
     R1*7 |
-    r2 r4 g ^"pizz."
+    r2 r4 g ^\pizz
   }
   \unis
   c4 r r as |
@@ -631,7 +631,7 @@ CelloBassNotesIII = \relative c' {
   g r r2 |
   
   \barNumberCheck 234
-  c4\pp ^"pizz." r c r |
+  c4\pp ^\pizz r c r |
   c r r2 |
   as4 r as r |
   g r r2 |
@@ -650,7 +650,7 @@ CelloBassNotesIII = \relative c' {
   c4 r c r |
   b r c r |
   f, g r g |
-  c,4 ^"arco" es8 es g g c c |
+  c,4 ^\arco es8 es g g c c |
   g,4 b8 b d d g g |
   c,4 es8 es g g c c |
   g,4 b8 b d d g g |
