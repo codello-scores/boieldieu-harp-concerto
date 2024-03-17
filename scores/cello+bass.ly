@@ -16,7 +16,7 @@ twoside = ##f
   copyright = "© LJO Bremen"
 }
 
-BreaksI = { s1*13 \break s1*54 \break }
+BreaksI = { s1*13 \break s1*17 \break s1*37 \break }
 BreaksII = {}
 BreaksIII = { s1*216 \break }
 CelloI = \keepWithTag #'Cello << \CelloBassNotesI \DynamicsI \BreaksI >>

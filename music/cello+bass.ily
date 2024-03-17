@@ -49,7 +49,7 @@ CelloBassNotesI = \relative c {
   d4 d, d d |
   d d, d r |
   \barNumberCheck 30
-  \apart
+  \div
   \tag #'Cello {
     g'-.\p d-. g-. d-. |
     a'-. d,-. g-. d-. |
