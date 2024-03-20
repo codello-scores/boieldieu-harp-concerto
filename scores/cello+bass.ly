@@ -53,7 +53,7 @@ BassIII = \keepWithTag #'Bass << \CelloBassNotesIII \DynamicsIII \BreaksIII >>
       \override VerticalAxisGroup.remove-first = ##t
       \override VerticalAxisGroup.remove-layer = 1
     } \BassI
-    \new Staff = "Divisi" \with {
+    \new Staff = "CelloBass" \with {
       instrumentName = "Cello & Bass"
       shortInstrumentName = "Vc./Cb."
       soloText = #"Vc."
@@ -92,7 +92,7 @@ BassIII = \keepWithTag #'Bass << \CelloBassNotesIII \DynamicsIII \BreaksIII >>
       \override VerticalAxisGroup.remove-first = ##t
       \override VerticalAxisGroup.remove-layer = 1
     } \BassII
-    \new Staff = "Divisi" \with {
+    \new Staff = "CelloBass" \with {
       instrumentName = "Cello & Bass"
       shortInstrumentName = "Vc./Cb."
       soloText = #"Vc."
@@ -133,7 +133,7 @@ BassIII = \keepWithTag #'Bass << \CelloBassNotesIII \DynamicsIII \BreaksIII >>
       \override VerticalAxisGroup.remove-first = ##t
       \override VerticalAxisGroup.remove-layer = 1
     } \BassIII
-    \new Staff = "Divisi" \with {
+    \new Staff = "CelloBass" \with {
       instrumentName = "Cello & Bass"
       shortInstrumentName = "Vc./Cb."
       soloText = #"Vc."

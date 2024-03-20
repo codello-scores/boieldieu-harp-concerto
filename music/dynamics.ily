@@ -1,5 +1,6 @@
 \version "2.24.0"
 
+Violins = #'(Violin1 Violin2)
 Strings = #'(Violin1 Violin2 Viola Cello Bass)
 Winds = #'(Flutes Oboes Bassoons Horns)
 
@@ -14,7 +15,8 @@ DynamicsI = {
 	\tag #'Bass \tag #Winds {
 		s1 |
 	}
-	s1*6 |
+	s1*3 |
+	s1*3 |
 	s1\ff |
 	\tag #Strings {
 		s4 s2.\ff |
@@ -48,10 +50,23 @@ DynamicsI = {
 	s1 |
 	\barNumberCheck 45
 	s1\ff |
-	s1*3 |
-	s1\ff |
-	s1\ff |
 	\tag #Winds \tag #'Violin1 {
+		s8 s4\sf s8 s8 s4\sf s8 |
+		s1
+		s8 s4\sf s8 s8 s4\sf s8 |
+	}
+	\tag #'(Violin2 Viola Cello Bass) {
+		s1*3
+	}
+	\tag #Winds \tag #'Viola {
+		s4\ff s s\f s\f
+		s4\ff s s\f s\f
+	}
+	\tag #'(Violin1 Violin2 Cello Bass) {
+		s1\ff
+		s1\ff
+	}
+	\tag #Winds \tag #Violins {
 		\repeat unfold 3 { s8 s4\sf s8 s8 s4\sf s8 | }
 	}
 	\tag #'(Viola Cello Bass) {
@@ -66,11 +81,16 @@ DynamicsI = {
 	s4\ff s2. |
 	\tag #Strings {
 		s2. s4\ff |
-		s1 |
+		\tag #Violins {
+			s1\ff
+		}
+		\tag #'(Viola Cello Bass) {
+			s1 |
+		}
 		s2. s4\ff |
 		s\ff s s s\ff |
 		s\ff s s s\ff |
-		s\ff s\ff s s |
+		s\ff s s\ff s |
 	}
 	\tag #Winds {
 		s1*6 |
@@ -99,19 +119,24 @@ DynamicsI = {
 		s1*8 |
 		s1\p |
 		s1*43 |
-		s1\f |
+		\tag #'(Violin1 Violin2 Viola) {
+			s1 _\markup { "poco " \dynamic f }
+		}
+		\tag #'(Cello Bass) {
+			s1\f |
+		}
 	}
 	\tag #Winds {
 		s1*53 |
 	}
 	\barNumberCheck 151
 	s1\ff |
-	\tag #Winds {
+	\tag #Winds \tag #'Violin1 {
 		s8 s4\sf s8 s s4\sf s8 |
 		s1 |
 		s8 s4\sf s8 s s4\sf s8 |
 	}
-	\tag #Strings {
+	\tag #'(Violin2 Viola Cello Bass) {
 		s1*3
 	}
 	\tag #'(Flutes Oboes Bassoons) \tag #Strings {
@@ -136,7 +161,19 @@ DynamicsI = {
 	\tempo "a tempo"
 	s1*20 |
 	\tempo "meno"
-	s1*15 |
+	
+	s1*8 |
+	\tag #Strings {
+		s4\> s4\! s2 |
+		s4\> s4\! s2 |
+		s1*2
+		s4\> s4\! s2 |
+		s4\> s4\! s2 |
+		s1*1
+	}
+	\tag #Winds {
+		s1*7
+	}
 	\tempo "a tempo"
 	s1*19 |
 	\tag #Strings {
@@ -194,8 +231,14 @@ DynamicsII = {
 	\bar "||"
 	\tempo "a tempo"
 	\key c \minor
-	s8 s\< s s\! s4\fermata s |
-	s2 s\fermata |
+	\tag #'(Violin1 Violin2 Cello Bass) {
+		s8 s\< s s\! s4\fermata s |
+		s2 s\fermata |
+	}
+	\tag #'Viola {
+		s8 s\< s s\! s4 s |
+		s2 s |
+	}
 	s4 s s\fermata s _"attaca"
 	\bar "||"
 }
