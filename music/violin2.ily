@@ -7,7 +7,7 @@ ViolinTwoNotesI = \relative c' {
   8.[ 16 8. 16] 8.[ 16 8. 16] |
   <b d,>8.[ <d d,>16 8. <b d,>16] 4 r |
   <g' b,>4. 8 8 8 8 8 |
-  g8(\sf\> fis) g4\! g8(\sf as) g4\! |
+  g8(\sf\> fis) g4\! g8(\sf\> as) g4\! |
   g8(\sf\> a) g4\! g\turn a8. f16 |
   <e g,>8. <g g,>16 <g g,>8. <c e,>16 4 r |
   c,2 b8( d c e) |
@@ -36,11 +36,11 @@ ViolinTwoNotesI = \relative c' {
   b( d, a' d,) d-! d( g b) |
   b,( d) d-. d-. c( d) d-. d-. |
   d( g) g-. g-. fis( a) a-. a-. |
-  \tuplet 3/2 { g( fis e } \tuplet 3/2 { d c b) } a4( c) |
-  b8[ b] g'[ g] \tuplet 3/2 { fis d e } \tuplet 3/2 { fis g a } |
+  \tuplet 3/2 { g([ fis e] } \tuplet 3/2 { d[ c b)] } a4( c) |
+  b8[ b] g'[ g] \tuplet 3/2 { fis[ d e] } \tuplet 3/2 { fis[ g a] } |
   
   \barNumberCheck 38
-  b,( d b d) b( d b d) |
+  b,(\p d b d) b( d b d) |
   c( d c d) c( d c d) |
   a( d) fis-. fis-. g-. g-. a-. a-. |
   g( d a' d,) d d( g b) |
@@ -50,8 +50,8 @@ ViolinTwoNotesI = \relative c' {
   <d c'>2:16 2:16 |
   <d b'>2:16 2:16 |
   <d c'>2:16 2:16 |
-  <b g'>8 8 4 a'16->( g fis g) fis->( g a g) |
-  f8 f f4 g16->( f e f) e->( f g f) |
+  <b g'>8 8 4 a'16->[( g fis g)] fis->[( g a g)] |
+  f8 f f4 g16->[( f e f)] e->[( f g f)] |
   e8 b'4 gis8 e e4 d8 |
   c c'4 a8 f f4 e8 |
   d d'4 b8 g g4 f8 |
@@ -229,13 +229,13 @@ ViolinTwoNotesI = \relative c' {
   <e b'>4 4 4 4 |
   <b gis'>4 4 4 4 |
   <e c'>8 4 8 8 4 8 |
-  a'16 a, b c d e fis gis a b c b d c b a |
+  a'16[ a, b c] d[ e fis gis] a[ b c b] d[ c b a] |
   gis8 <d e,>4 8 8 4 8 |
-  d16 e, fis gis a b c d e dis e dis e d c b |
+  d16[ e, fis gis] a[ b c d] e[ dis e dis] e[ d c b] |
   <c e,>8 4 8 8 4 8 |
-  c16 a b c d e fis gis a b c b d c b a |
+  c16[ a b c] d[ e fis gis] a[ b c b] d[ c b a] |
   g8 <g b,>4 <d d,>8 <b d,>8 4 <d d,>8 |
-  d16 g, a b c d e f g fis g fis g fis g f |
+  d16[ g, a b] c[ d e f] g[ fis g fis] g[ fis g f] |
   \repeat unfold 2 { e4:16 e8:16\> f8:16 g8:16 fis8:16\> fis8:16 f8:16\! | }
   e2:16 d2:16 |
   c2:16 b2:16 |

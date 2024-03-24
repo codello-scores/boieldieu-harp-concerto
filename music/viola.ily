@@ -31,7 +31,7 @@ ViolaNotesI = \relative c' {
   fis8.[ 16 8. 16] g8.[ 16 8. 16] |
   fis4 <d d,>4 4 4 |
   4 4 4 r |
-  b8( d b d) b( d b d) |
+  b8(\p d b d) b( d b d) |
   c( d c d) b( d b d) |
   a( d fis, d') g,( d' a d) |
   b( d fis, d') g,( b d) d |
@@ -39,7 +39,9 @@ ViolaNotesI = \relative c' {
   d2 a' |
   d, e |
   b2( a8) r r4 |
-  b8( d b d) b( d b d) |
+  
+  \barNumberCheck 38
+  b8(\p d b d) b( d b d) |
   c( d c d) b( d b d) |
   a( d fis, d') g,( d' a d) |
   b( d, a' d,) g g( b d) |

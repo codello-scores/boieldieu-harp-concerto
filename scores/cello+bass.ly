@@ -3,22 +3,17 @@
 twoside = ##f
 \include "pdq/pdq.ily" % Use the PDQ layout
 
+\include "scores/common.ily"
 \include "music/dynamics.ily"
 \include "music/cello+bass.ily"
 
 \header {
-  title = "Konzert"
-  subtitle = "für Harfe und Orchester"
-  subsubtitle = "in C-Dur"
-  repeattitle = "Konzert für Harfe und Orchester"
-  composer = "François Adrien Boieldieu (1775-1834)"
   instrument = "Violoncello & Bass"
-  copyright = "© LJO Bremen"
 }
 
-BreaksI = { s1*13 \break s1*17 \break s1*37 \break }
+BreaksI = { s1*13 \break s1*16 \break s1*38 \break }
 BreaksII = {}
-BreaksIII = { s1*216 \break }
+BreaksIII = { s1*111 \pageBreak s1*105 \break }
 CelloI = \keepWithTag #'Cello << \CelloBassNotesI \DynamicsI \BreaksI >>
 CelloII = \keepWithTag #'Cello << \CelloBassNotesII \DynamicsII \BreaksII >>
 CelloIII = \keepWithTag #'Cello << \CelloBassNotesIII \DynamicsIII \BreaksIII >>
@@ -26,12 +21,7 @@ BassI = \keepWithTag #'Bass << \CelloBassNotesI \DynamicsI \BreaksI >>
 BassII = \keepWithTag #'Bass << \CelloBassNotesII \DynamicsII \BreaksII >>
 BassIII = \keepWithTag #'Bass << \CelloBassNotesIII \DynamicsIII \BreaksIII >>
 
-\partPaper
-
 \score {
-  \layout {
-    \partLayout
-  }
   \header {
     movement = "I"
   }
@@ -67,9 +57,6 @@ BassIII = \keepWithTag #'Bass << \CelloBassNotesIII \DynamicsIII \BreaksIII >>
 }
 
 \score {
-  \layout {
-    \partLayout
-  }
   \header {
     movement = "II"
     composer = ""
@@ -105,9 +92,6 @@ BassIII = \keepWithTag #'Bass << \CelloBassNotesIII \DynamicsIII \BreaksIII >>
 }
 
 \score {
-  \layout {
-    \partLayout
-  }
   \header {
     movement = \markup \center-column {
       \line { "III" }

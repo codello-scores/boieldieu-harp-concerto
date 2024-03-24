@@ -31,28 +31,28 @@ ViolinOneNotesI = \relative c''' {
   fis8. <d' d,>16 8. 16 8. 16 <b d,>8. g16 |
   <fis a,>4 <b d,> <a d,> <b d,> |
   <a d,> <d d, d,> <d d, d,> r |
-  b_\markup { \dynamic p "dolce" } \tuplet 3/2 { b8(\> c d)\! } d4-! d( |
+  b\pDolce \tuplet 3/2 { b8(\> c d)\! } d4-! d( |
   fis,) \tuplet 3/2 { fis8(\> g a)\! } g4-! \tuplet 3/2 { g8( a b) } |
   d,4-! d\< d d\! |
   d4.( c8) b4-! r |
   b \tuplet 3/2 { b8(\< d g)\! } g4\sf \tuplet 3/2 { g8(\> fis e)\! } |
   d4 \tuplet 3/2 { d8(\< g b)\! } b4\sf \tuplet 3/2 { a8(\> g fis)\! }
-  \tuplet 3/2 { g8( fis e } \tuplet 3/2 { d c b } \tuplet 3/2 { a gis a } \tuplet 3/2 { e' c a) } |
-  \tuplet 3/2 { g( fis g } \tuplet 3/2 { b e d) } a4 r |
-  b4 _"dolce" \tuplet 3/2 { b8(\> c d)\! } d4-! d( |
+  \tuplet 3/2 { g8([ fis e] } \tuplet 3/2 { d[ c b] } \tuplet 3/2 { a[ gis a] } \tuplet 3/2 { e'[ c a]) } |
+  \tuplet 3/2 { g([ fis g] } \tuplet 3/2 { b[ e d]) } a4 r |
+  b4\pDolce \tuplet 3/2 { b8(\> c d)\! } d4-! d( |
   fis,)-! \tuplet 3/2 { fis8\>( g a)\! } g4-! \tuplet 3/2 { g8(\> a b)\! } |
   d,4-! d'\< d d\! |
   d4.( c8) b4-! r |
   
   \barNumberCheck 42
-  \repeat unfold 2 { \tuplet 3/2 { c8( fis a) } a4~ \tuplet 3/2 { a8 g( fis } \tuplet 3/2 { e d c) } | }
+  \repeat unfold 2 { \tuplet 3/2 { c8( fis a) } a4~ \tuplet 3/2 { a8[ g( fis] } \tuplet 3/2 { e[ d c)] } | }
   b4( a8 e') g,4( \acciaccatura { fis8 } b8 a) |
   g b' d,4~ d8 e16 fis g a b g |
   fis8 a4 fis8 d <d d'>4( c'16 a) |
   g8 b d,4~ d8 e16 fis g a b g |
   fis8 a4 fis8 d <d d'>4( c'16 a) |
-  <g b,>8 8 4 a16(-> g fis g) fis(-> g a g)
-  f8 f f4 g16(-> f e f) e(-> f g f) |
+  <g b,>8 8 4 a16([-> g fis g)] fis([-> g a g)]
+  f8 f f4 g16([-> f e f)] e([-> f g f)] |
   e8 <b b'>4 gis'8 e <e e,>4 d8 |
   c <c c'>4 a'8 f! f4 e8 |
   d <d d'>4 b'8 g <g b,>4 f8 |
@@ -233,13 +233,13 @@ ViolinOneNotesI = \relative c''' {
   
   \barNumberCheck 233
   <a' a,>8 4 <e a,>8 c c4 <e a,>8 |
-  a16 a, b c d e fis gis a b c b d c b a |
+  a16[ a, b c] d[ e fis gis] a[ b c b] d[ c b a] |
   gis8 e4 b8 gis gis4 b8 |
-  e16 e, fis gis a b c d e dis e dis e d c b |
+  e16[ e, fis gis] a[ b c d] e[ dis e dis] e d c b |
   c8 <a a'>4 <a e'>8 c <c a>4 <a e'>8 |
-  a'16 a, b c d e fis gis a b c b d c b a |
+  a'16[ a, b c] d[ e fis gis] a[ b c b] d[ c b a] |
   g8 <g b,>4 <d d,>8 <b d,>8 4 <d d,>8 |
-  g16 g, a b c d e f g fis g fis g a g f |
+  g16[ g, a b] c[ d e f] g[ fis g fis] g[ a g f] |
   e4:16 c'4:16 c2:16 |
   c2:16 c2:16 |
   c4:16 a2:16 g4:16 |
@@ -356,7 +356,7 @@ ViolinOneNotesII = \relative c' {
 
 ViolinOneNotesIII = \relative c' {
   \clef treble
-  r8 es( g) r r es( g) r |
+  r8 es(\pp g) r r es( g) r |
   r es( g) r r2 |
   r8 c,( es) r r c( fis) r |
   r d( g) r r2 |
@@ -364,7 +364,7 @@ ViolinOneNotesIII = \relative c' {
   r as, d r r2 |
   r8 c es r r b d r |
   <es c>4 r r2 |
-  r8 es es r r es es r |
+  r8 es\pp es r r es es r |
   r es es r r2 |
   r8 es es r r es es r |
   r f f r r es es r |
@@ -393,7 +393,7 @@ ViolinOneNotesIII = \relative c' {
   R1*1 |
   
   \barNumberCheck 38
-  r8\pp es( g) r r es( g) r |
+  r8 es(\pp g) r r es( g) r |
   r es( g) r r2 |
   r8 c,( es) r r c( fis) r |
   r d( g) r r2 |

@@ -3,32 +3,22 @@
 twoside = ##f
 \include "pdq/pdq.ily" % Use the PDQ layout
 
+\include "scores/common.ily"
 \include "music/dynamics.ily"
 \include "music/violin2.ily"
 
 \header {
-  title = "Konzert"
-  subtitle = "für Harfe und Orchester"
-  subsubtitle = "in C-Dur"
-  repeattitle = "Konzert für Harfe und Orchester"
-  composer = "François Adrien Boieldieu (1775-1834)"
   instrument = "Violine 2"
-  copyright = "© LJO Bremen"
 }
 
-BreaksI = { }
+BreaksI = {}
 BreaksII = {}
-BreaksIII = { }
+BreaksIII = {}
 ViolinTwoI = << \ViolinTwoNotesI \keepWithTag #'Violin2 \DynamicsI \BreaksI >>
 ViolinTwoII = << \ViolinTwoNotesII \keepWithTag #'Violin2 \DynamicsII \BreaksII >>
 ViolinTwoIII = << \ViolinTwoNotesIII \keepWithTag #'Violin2 \DynamicsIII \BreaksIII >>
 
-\partPaper
-
 \score {
-  \layout {
-    \partLayout
-  }
   \header {
     movement = "I"
   }
@@ -42,9 +32,6 @@ ViolinTwoIII = << \ViolinTwoNotesIII \keepWithTag #'Violin2 \DynamicsIII \Breaks
 \pageBreak
 
 \score {
-  \layout {
-    \partLayout
-  }
   \header {
     movement = "II"
   }
@@ -56,9 +43,6 @@ ViolinTwoIII = << \ViolinTwoNotesIII \keepWithTag #'Violin2 \DynamicsIII \Breaks
 }
 
 \score {
-  \layout {
-    \partLayout
-  }
   \header {
     movement = \markup \center-column {
       \line { "III" }

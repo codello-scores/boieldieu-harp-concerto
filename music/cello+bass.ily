@@ -64,7 +64,7 @@ CelloBassNotesI = \relative c {
   b c |
   b4 g c a |
   d d, d' d, |
-  g-! d-! g-! d-! |
+  g-!\p d-! g-! d-! |
   a'-! d,-! g-! d-! |
   fis-! d-! e-! fis-! |
   g-! d-! g-! g,-! |

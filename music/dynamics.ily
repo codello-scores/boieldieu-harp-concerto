@@ -11,13 +11,21 @@ DynamicsI = {
 	s1*7 |
 	\tag #'(Violin1 Violin2 Viola Cello) {
 		s1\p |
+		s1*3 |
 	}
 	\tag #'Bass \tag #Winds {
-		s1 |
+		s1*4 |
 	}
+	
+	\mark\default
+	\barNumberCheck 13
 	s1*3 |
-	s1*3 |
-	s1\ff |
+	\tag #Strings \tag #'(Flutes Bassoons Horns) {
+		s1\ff |
+	}
+	\tag #'Oboes {
+		s4 s2.\ff
+	}
 	\tag #Strings {
 		s4 s2.\ff |
 	}
@@ -29,25 +37,22 @@ DynamicsI = {
 	s1 |
 	s4 s2.\sf |
 	s1*8 |
+	
+	\mark\default
 	\barNumberCheck 30
-	s1*4 |
-	s1\p |
-	s1*3 |
-	s1\p |
-	s1*3 |
-	\tag #Strings \tag #'(Flutes Oboes) {
+	s1*12 |
+	
+	\mark \default
+	\barNumberCheck 42
+	\tag #Strings \tag #'Flutes {
 		s2\sf\> s4\! s4 |
-	}
-	\tag #'(Bassoons Horns) {
+		s2\sf\> s4\! s4 |
 		s1 |
 	}
-	\tag #Strings \tag #'(Flutes Oboes) {
-		s2\sf\> s4\! s4 |
+	\tag #'(Oboes Bassoons Horns) {
+		s1*3 |
 	}
-	\tag #'(Bassoons Horns) {
-		s1 |
-	}
-	s1 |
+	
 	\barNumberCheck 45
 	s1\ff |
 	\tag #Winds \tag #'Violin1 {
@@ -77,6 +82,9 @@ DynamicsI = {
 	s4\f s4\f s4\f s4\f |
 	s4 s4\ff s4\ff s4\ff |
 	s4\ff s4\ff s2 |
+	
+	\mark\default
+	\barNumberCheck 59
 	s4\ff s s4\ff s |
 	s4\ff s2. |
 	\tag #Strings {
@@ -103,6 +111,14 @@ DynamicsI = {
 		s1*3 |
 		s2. s4\f |
 		s1 |
+	}
+	\tag #Winds {
+		s1*8 |
+	}
+		
+	\mark\default
+	\barNumberCheck 76
+	\tag #Strings {
 		s1\pp |
 		s1*3 |
 		s1\pp |
@@ -111,14 +127,36 @@ DynamicsI = {
 		s1*15 |
 	}
 	\tag #Winds {
-		s1*30 |
+		s1*22 |
 	}
+	
+	\mark\default
 	\barNumberCheck 98
 	\tempo "meno"
+	s1*8 |
+	
+	\mark\default
+	\barNumberCheck 106
 	\tag #Strings {
-		s1*8 |
 		s1\p |
-		s1*43 |
+		s1*10 |
+	}
+	\tag #Winds {
+		s1*11 |
+	}
+	
+	\mark\default
+	\barNumberCheck 117
+	s1*15 |
+	
+	\mark\default
+	\barNumberCheck 132
+	s1*15 |
+	
+	\mark\default
+	\barNumberCheck 147
+	\tag #Strings {
+		s1*3 |
 		\tag #'(Violin1 Violin2 Viola) {
 			s1 _\markup { "poco " \dynamic f }
 		}
@@ -127,7 +165,7 @@ DynamicsI = {
 		}
 	}
 	\tag #Winds {
-		s1*53 |
+		s1*4 |
 	}
 	\barNumberCheck 151
 	s1\ff |
@@ -146,9 +184,18 @@ DynamicsI = {
 	\tag #'Horns {
 		s1*2
 	}
-	s1*6 |
+	s1*4 |
+	\tag #Winds {
+		s8 s4\sf s8 s8 s4\sf s8 |
+		s8 s4\sf s8 s8 s4\sf s8 |
+	}
+	\tag #Strings {
+		s1*2 |
+	}
 	s4. s8\ff s2 |
 	s1*2 |
+	
+	\mark\default
 	\barNumberCheck 166
 	\tempo "meno"
 	\tag #Strings {
@@ -158,12 +205,18 @@ DynamicsI = {
 	\tag #Winds {
 		s1*11
 	}
+	
+	\mark\default
+	\barNumberCheck 177
 	\tempo "a tempo"
 	s1*20 |
+	
+	\mark\default
+	\barNumberCheck 197
 	\tempo "meno"
 	
-	s1*8 |
 	\tag #Strings {
+		s1*8 |
 		s4\> s4\! s2 |
 		s4\> s4\! s2 |
 		s1*2
@@ -172,33 +225,70 @@ DynamicsI = {
 		s1*1
 	}
 	\tag #Winds {
-		s1*7
+		s1*15 |
 	}
+	
+	\mark\default
+	\barNumberCheck 212
 	\tempo "a tempo"
-	s1*19 |
+	s1*15
+	
+	\mark\default
+	\barNumberCheck 227
 	\tag #Strings {
+		s1*4 |
 		s1\f |
 		s1 |
 	}
 	\tag #Winds {
-		s1*2 |
+		s1*6 |
 	}
 	s1\ff |
-	s1*17 |
+	s1*9
+	
+	\mark\default
+	\barNumberCheck 243
 	\tag #Strings {
+		s1*8 |
 		s1*6 |
 		s2 s4 s4\f |
 		s1 |
+	}
+	\tag #Winds {
+		s1*16 |
+	}
+	
+	\mark\default
+	\barNumberCheck 259
+	\tag #Strings {
 		s1\pp |
 		s1*3 |
 		s1_\markup { \italic "poco" \dynamic f} |
-		s1*23 |
-		s1\pp |
-		s1*33 |
+		s1*15 |
 	}
 	\tag #Winds {
-		s1*70 |
+		s1*20 |
 	}
+	
+	\mark\default
+	\barNumberCheck 279
+	\tag #Strings {
+		s1*8 |
+		s1\pp |
+		s1*9 |
+	}
+	\tag #Winds {
+		s1*18 |
+	}
+	
+	\mark\default
+	\barNumberCheck 297
+	s1*16 |
+	
+	\mark\default
+	\barNumberCheck 313
+	s1*8
+	
 	s1\ff |
 	s1*9 |
 	\bar "|."
@@ -206,38 +296,59 @@ DynamicsI = {
 
 DynamicsII = {
 	\key c \minor \time 4/4
+	\mark #21
 	\tempo "Andante lento"
-	% Movement has only strings
-	s4\f s s s\f |
-	s2 s\f |
-	s\pp s\p |
-	s1 |
-	\tag #'(Violin1 Violin2 Viola) {
-		s8 s\pp s2.
+	
+	\tag #Strings {
+		s4\f s s s\f |
+		s2 s\f |
+		s\pp s\p |
+		s1 |
+		\tag #'(Violin1 Violin2 Viola) {
+			s8 s\pp s2.
+		}
+		\tag #'(Cello Bass) {
+			s1\pp
+		}
+		s1*3 |
+		s8 s\< s s\! s2 |
+		s8 s\< s s\! s2 |
+		s1*3 |
+		s1\f |
 	}
-	\tag #'(Cello Bass) {
-		s1\pp
+	\tag #Winds {
+		s1*14 |
 	}
-	s1*3 |
-	s8 s\< s s\! s2 |
-	s8 s\< s s\! s2 |
-	s1*3 |
-	s1\f |
 	\bar "||"
+	
+	\mark\default
+	\barNumberCheck 15
 	\tempo "meno"
 	\key c \major
-	s1\mf |
-	s1*7 |
+	\tag #Strings {
+		s1\mf |
+		s1*7 |
+	}
+	\tag #Winds {
+		s1*8 |
+	}
 	\bar "||"
+	
+	\barNumberCheck 23
 	\tempo "a tempo"
 	\key c \minor
-	\tag #'(Violin1 Violin2 Cello Bass) {
-		s8 s\< s s\! s4\fermata s |
-		s2 s\fermata |
+	\tag #Strings {
+		\tag #'(Violin1 Violin2 Cello Bass) {
+			s8 s\< s s\! s4\fermata s |
+			s2 s\fermata |
+		}
+		\tag #'Viola {
+			s8 s\< s s\! s4 s |
+			s2 s |
+		}
 	}
-	\tag #'Viola {
-		s8 s\< s s\! s4 s |
-		s2 s |
+	\tag #Winds {
+		s1*2 |
 	}
 	s4 s s\fermata s _"attaca"
 	\bar "||"
@@ -245,35 +356,62 @@ DynamicsII = {
 
 DynamicsIII = {
 	\key c \minor \time 2/2
+	\mark #23
 	\tempo "Allegro agitato"
 	s1*19 |
+	
+	\mark\default
+	\barNumberCheck 20
 	s1\f |
 	s1*8 |
 	\tag #Strings {
 		s1\pp |
 		s1*3 |
 		s1\ppp |
-		s1*23 |
-		
+		s1*4 |
 	}
 	\tag #Winds {
-		s1*28 |
+		s1*9 |
 	}
+	
+	\mark\default
+	\barNumberCheck 38
+	s1*19 |
+	
+	\mark\default
 	\barNumberCheck 57
 	s1\ff |
 	s1*9 |
+	
+	\mark\default
+	\barNumberCheck 67
 	\tag #Strings {
 		s1*4 |
 		s1\pp |
-		s1*19 |
-		s1\pp |
-		s1*19 |
+		s1*11
 	}
 	\tag #Winds {
-		s1*44 |
+		s1*16 |
 	}
-	\barNumberCheck 111
+	
+	\mark\default
+	\barNumberCheck 83
+	\tag #Strings {
+		s1*8 |
+		s1\pp |
+		s1*7
+	}
+	\tag #Winds {
+		s1*16 |
+	}
+	
+	\mark\default
+	\barNumberCheck 99
+	s1*12 |
 	R1\fermata |
+	
+	\mark\default
+	\barNumberCheck 112
 	\tempo "a tempo"
 	\tag #Strings {
 		s1*4 |
@@ -281,11 +419,17 @@ DynamicsIII = {
 		s1\pp |
 		s1\ff |
 		s1\pp |
-		s1*36 |
+		s1*17 |
 	}
 	\tag #Winds {
-		s1*44 |
+		s1*25 |
 	}
+	
+	\mark\default
+	\barNumberCheck 137
+	s1*19 |
+	
+	\mark\default
 	\barNumberCheck 156
 	s1\ff |
 	s1*7 |
@@ -293,6 +437,9 @@ DynamicsIII = {
 	s1\ff |
 	s1\ff |
 	\bar "||"
+	
+	\mark\default
+	\barNumberCheck 167
 	\key c \major
 	\tag #Strings {
 		s1\pp
@@ -301,31 +448,40 @@ DynamicsIII = {
 	\tag #Winds {
 		s1*25 |
 	}
-	\barNumberCheck 192
 	R1\fermata
+	
+	\mark\default
+	\barNumberCheck 193
 	\tag #Strings {
 		s1\pp |
 		s1*16 |
 	}
 	\tag #Winds {
-		s1*77 |
-		\key c \minor
+		s1*17 |
 	}
 	\bar "||"
+	
+	\mark\default
+	\barNumberCheck 210
 	\key c \minor
 	s1*23 |
-	\barNumberCheck 233
 	\tag #Strings {
 		s2
 		s2 ^\markup { \halign #0 "cadenza" }-\tweak script-priority -100 \fermata |
 	}
 	\tag #Winds {
 		R1 ^\markup { \halign #0 "cadenza" }-\tweak script-priority -100 \fermata |
+		
 	}
+	\allowPageTurn
 	
+	\mark\default
 	\barNumberCheck 234
 	\tempo "a tempo"
 	s1*19 |
+	
+	\mark\default
+	\barNumberCheck 253
 	s1\ff
 	s1*7 |
 	\tag #Strings {
