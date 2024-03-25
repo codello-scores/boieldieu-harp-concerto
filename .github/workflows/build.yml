@@ -2,27 +2,9 @@ name: Build
 on: push
 
 jobs:
-  prepare:
-    name: Prepare Build
-    runs-on: ubuntu-latest
-    outputs:
-      scores: ${{ steps.scores.outputs.json }}
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-      - name: List Scores
-        id: scores
-        run: |
-          echo -n "json=" >> "$GITHUB_OUTPUT"
-          ls scores/*.ly | jq --raw-input --slurp --compact-output 'split("\n")[:-1] | map({"name": .|sub("^scores/"; "")|sub(".ly$";""), "file": .})' >> "$GITHUB_OUTPUT"
-
   build:
-    name: Compile ${{ matrix.score.file }}
-    needs: [ prepare ]
+    name: Compile Scores
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        score: ${{ fromJSON(needs.prepare.outputs.scores) }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -39,12 +21,11 @@ jobs:
           AWS_DEFAULT_REGION: eu-central
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - name: Compile ${{ matrix.file }}
-        run: make "build/$SCORE.pdf"
-        env:
-          SCORE: ${{ matrix.score.name }}
+      - name: Compile Scores
+        run: make all
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.score.name }}
+          name: Scores
           path: build/*
+          
