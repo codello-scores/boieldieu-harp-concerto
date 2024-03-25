@@ -2,23 +2,49 @@ name: Build
 on: push
 
 jobs:
-  build:
-    name: Build Scores
+  prepare:
+    name: Prepare Build
     runs-on: ubuntu-latest
+    outputs:
+      scores: ${{ steps.scores.outputs.json }}
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: List Scores
+        id: scores
+        run: |
+          echo -n "json=" >> "$GITHUB_OUTPUT"
+          ls scores/*.ly | jq --raw-input --slurp --compact-output 'split("\n")[:-1] | map({"name": .|sub("^scores/"; "")|sub(".ly$";""), "file": .})' >> "$GITHUB_OUTPUT"
+
+  build:
+    name: Compile ${{ matrix.score.file }}
+    needs: [ prepare ]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        score: ${{ fromJSON(needs.prepare.outputs.scores) }}
+    steps:
+      - uses: actions/checkout@v4
         with:
           submodules: true
-      - name: Compile Files
-        uses: docker://codello/lilypond
+      - name: Setup LilyPond
+        uses: codello/setup-lilypond@main
         with:
-          entrypoint: make
-          args: ci
+          lilypond-version: "2.24"
+          ol-fonts: beethoven
+      - name: Install Yorkten Font
+        run: aws s3 cp s3://brewery/fonts/yorkten/ "$HOME/.local/share/fonts" --recursive
         env:
-          B2_KEY_ID: ${{ secrets.B2_KEY_ID }}
-          B2_APPLICATION_KEY: ${{ secrets.B2_APPLICATION_KEY }}
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v1
+          AWS_ENDPOINT_URL: https://s3.eu-central-003.backblazeb2.com
+          AWS_DEFAULT_REGION: eu-central
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Compile ${{ matrix.file }}
+        run: make "build/$SCORE.pdf"
+        env:
+          SCORE: ${{ matrix.score.name }}
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: Scores
-          path: build
+          name: ${{ matrix.score.name }}
+          path: build/*
