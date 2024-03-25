@@ -1,9 +1,14 @@
 name: Build
-on: push
+on:
+  push:
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ published ]
 
 jobs:
   build:
-    name: Compile Scores
+    name: Build Scores
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,9 +28,11 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Compile Scores
         run: make all
-      - name: Upload Artifact
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: Scores
           path: build/*
-          
+      - name: Upload Release Assets
+        if: ${{ github.event_name == 'release' && github.event.action == 'published' }}
+        run: gh release upload "$GITHUB_REF_NAME" build/*
