@@ -1,18 +1,20 @@
-# My LilyPond Project
+# Boieldieu: Harfenkonzert in C-Dur
 
-Add the composer, title, and opus of the piece here.
+Das Harfenkonzert in C-Dur von François Adrien Boieldieu, gesetzt für das LJO Bremen.
 
-## Engraving Scores
+## Noten setzen
 
 ```shell
-make all         # Compiles all parts and the full score.
-make <score>.pdf # Engraves the full score.
-make <part>.pdf  # Engraves a <part>
+make all         # Alle Stimmen und die Partitur setzen
+make score.pdf   # Nur die Partitur setzen
+make <part>.pdf  # Nur <part> setzen.
 ```
 
-It may be helpful to list the available parts here.
+Verfügbare Stimmen sind: `Score`, `Flute1`, `Flute2`, `Oboe1`, `Oboe2`, `Bassoon1`, `Bassoon2`, `Horn1`, `Horn2`, `Violin1`, `Violin2`, `Viola`, `Cello+Bass`.
 
-## Installing Fonts
+Die Harfenstimme ist nicht enthalten.
 
-This project uses the [PDQ](https://github.com/Codello/pdq) theme. In order to compile these files the Yorkten font is required.
+## Schriften installieren
+
+Diese Notenausgabe benutzt das [PDQ](https://github.com/Codello/pdq) Theme. Zum Kompilieren ist die Yorkten-Schrift erforderlich.
 
