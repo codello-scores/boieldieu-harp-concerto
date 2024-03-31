@@ -31,7 +31,7 @@ ViolinTwoNotesI = \relative c'' {
   <a d,>4 <d, b' g'> <d a' fis'> <d b' g'> |
   <d a' fis'> <d d'> <d d'> r |
   b8(\p d b d) b( d b d) |
-  c( d c d) c( d c d) |
+  c( d c d) b( d b d) |
   a( d) fis-. fis-. g-. g-. a-. a-. |
   b( d, a' d,) d-! d( g b) |
   b,( d) d-. d-. c( d) d-. d-. |
@@ -41,7 +41,7 @@ ViolinTwoNotesI = \relative c'' {
   
   \barNumberCheck 38
   b,(\p d b d) b( d b d) |
-  c( d c d) c( d c d) |
+  c( d c d) b( d b d) |
   a( d) fis-. fis-. g-. g-. a-. a-. |
   g( d a' d,) d d( g b) |
   \repeat unfold 8 { a( c) } |
