@@ -1,13 +1,13 @@
 \version "2.24.0"
 
-ViolinTwoNotesI = \relative c' {
+ViolinTwoNotesI = \relative c'' {
   \clef treble
   <c e,>4. 8 8 8 8 8 |
   8. 16 4 r8. <c e,>16[ 8. 16] |
   8.[ 16 8. 16] 8.[ 16 8. 16] |
   <b d,>8.[ <d d,>16 8. <b d,>16] 4 r |
   <g' b,>4. 8 8 8 8 8 |
-  g8(\sf\> fis) g4\! g8(\sf\> as) g4\! |
+  g,8(\sf\> fis) g4\! g8(\sf\> as) g4\! |
   g8(\sf\> a) g4\! g\turn a8. f16 |
   <e g,>8. <g g,>16 <g g,>8. <c e,>16 4 r |
   c,2 b8( d c e) |
