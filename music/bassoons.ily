@@ -190,7 +190,7 @@ BassoonNotesI = \relative c' {
     b8 4 8 8 4 8 |
     b1 |
     c8 c,4-> d8 e8 es4-> d8 |
-    c8 c4-> d8 e e4-> d8 |
+    c8 c4-> d8 e es4-> d8 |
     c4
   }
   c' b bes |
@@ -303,13 +303,23 @@ BassoonNotesIII = \relative c {
     c c c c |
     c r r2 |
     d4 r r2 |
+    R1*8 |
+    g,1\p~ |
+    g~ |
+    g~ |
+    g~ |
+    g~ |
+    g~ |
+    g~ |
+    g2~ g4 r |
+    R1*70 |
   }
   \tag #'Bassoon2 {
     c,4 a' g fis |
     g r r2 |
     g4 r r2 |
+    R1*86 |
   }
-  R1*86 |
   
   \barNumberCheck 253
   \tag #'Bassoon1 {

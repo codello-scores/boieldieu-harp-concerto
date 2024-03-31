@@ -193,7 +193,7 @@ ViolinOneNotesI = \relative c''' {
   b r r2 |
   R1*1 |
   g,8-. ^\arco b-. e-. b-. g-. b-. e-. b-. |
-  a-. b-. dis-. b-. g-. b-. dis-. b-. |
+  a-. b-. dis-. b-. g-. b-. e-. b-. |
   b'-. b-. dis,-. dis-. e-.e-. fis-. fis-. |
   g-. b,-. g'-. fis-. e-. b-. g-. b-. |
   r g b4 r8 a c4 |
