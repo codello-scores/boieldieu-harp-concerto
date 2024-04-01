@@ -524,7 +524,7 @@ ViolaNotesIII = \relative c' {
   r a r b |
   
   \barNumberCheck 205
-  r4 es2.-> |
+  r4 es2.-> ^\arco |
   r4 bes2.-> |
   r4 bes2.-> |
   r4 bes2.-> |
