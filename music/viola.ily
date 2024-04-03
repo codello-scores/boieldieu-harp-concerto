@@ -393,7 +393,7 @@ ViolaNotesIII = \relative c' {
   
   \barNumberCheck 38
   R1*8 |
-  c4\pp r c r |
+  c4\pp ^\pizz r c r |
   c r r2 |
   c4 r c r |
   b r c r |
@@ -404,7 +404,7 @@ ViolaNotesIII = \relative c' {
   c4 r c r |
   b r c r |
   f, g r g |
-  c'4 8 8 4 4 |
+  c'4 ^\arco 8 8 4 4 |
   b4 8 8 4 4 |
   c4 8 8 4 4 |
   b4 8 8 4 4 |
